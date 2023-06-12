@@ -1,0 +1,20 @@
+*{
+	font-family: 'Itim', cursive;
+}
+body{
+	background: linear-gradient(45deg, white 70%, black 190%);
+
+
+}
+.navbar{
+	background: linear-gradient(45deg, white 10%, black 400%);
+	
+}
+
+.logo{
+	width:5em;
+	height: 5vh;
+}
+.card:hover {
+	box-shadow: 0 0 5px 2px black;
+}
