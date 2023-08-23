@@ -6,9 +6,9 @@ let s3 = setInterval(() => {
     d2.innerHTML += d2_value[n2];
     n2 += 1;
     if (n2 >= d2_value.length) {
-        clearInterval(s3); // Clear the interval when n2 reaches or exceeds d2_value.length
+        clearInterval(s3); 
     }
-},30); // You might want to add a slight delay between each character for better readability
+},35);
 
 let observer = new IntersectionObserver((e)=>{
     e.forEach((e)=>{
@@ -16,9 +16,8 @@ let observer = new IntersectionObserver((e)=>{
         if(e.isIntersecting){
             e.target.classList.add('show');
         }
-        else{
-            e.target.classList.remove('show');
-        }
+        else if (!e.isIntersecting && window.innerWidth > 580) {
+            e.target.classList.remove('show');}
     })
 })
 
